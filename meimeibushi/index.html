@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="妹妹不是人 - 深度解析超自然现象、民俗传说与都市异闻，探索灵异、妖怪与人类界限的边界故事。">
+    <meta name="keywords" content="妹妹不是人,超自然,灵异故事,民俗传说,都市异闻,妖怪">
+    <title>妹妹不是人-超自然灵异与都市异闻深度解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-color: #9b59b6;
+            --accent-hover: #8e44ad;
+            --border-color: #333;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 15, 17, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(to bottom, rgba(15,15,17,0.3), var(--bg-color)), url('https://picsum.photos/seed/ghost/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 1.5rem;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .section-link {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #222;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1rem;
+        }
+
+        /* List Style */
+        .list-item {
+            display: flex;
+            gap: 1.5rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .list-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .list-content {
+            flex: 1;
+        }
+
+        .list-meta {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .list-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .list-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-box {
+            background: linear-gradient(145deg, #1a1a1d, #151517);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: rgba(255,255,255,0.02);
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.2rem;
+            max-height: 500px; /* Arbitrary large height */
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0c;
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 0 2rem;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .list-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .list-img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>◆</span> 妹妹不是人
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#stories">灵异故事</a>
+                <a href="#culture">民俗文化</a>
+                <a href="#guide">异闻指南</a>
+                <a href="#about">关于我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索超越常理的边界</h1>
+                <p>当人类的规则在灵异面前失效，当“妹妹”不再是简单的称呼，我们将带您走进一个个光怪陆离的超自然世界，揭开那些不可言说的秘密。</p>
+                <a href="#stories" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Intro Features -->
+        <section class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">👻</div>
+                    <h3 class="feature-title">超自然现象解析</h3>
+                    <p class="feature-text">深入探讨灵异、鬼怪、妖魔与人类社会的微妙关系，还原故事背后的民俗逻辑。</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📖</div>
+                    <h3 class="feature-title">深度故事连载</h3>
+                    <p class="feature-text">原创及收录的都市异闻、民间传说，构建一个有血有肉的灵异世界。</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">安全生存指南</h3>
+                    <p class="feature-text">提供面对未知现象时的理性建议与心理疏导，在恐惧中寻找秩序。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Stories List -->
+        <section id="stories" class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门灵异故事</h2>
+                <a href="#" class="section-link">查看全部 &rarr;</a>
+            </div>
+            
+            <div class="list-item">
+                <img src="https://picsum.photos/seed/ghost1/200/200" alt="封面" class="list-img">
+                <div class="list-content">
+                    <div class="list-meta">都市传说 · 民间故事</div>
+                    <h3 class="list-title">深夜的敲门声：那不是风</h3>
+                    <p class="list-desc">老宅的夜总是静得可怕，每当凌晨三点，总会响起有节奏的敲门声。我以为是风吹动门板，直到看见门外站着一个没有脸的人影...</p>
+                </div>
+                <div class="list-meta" style="text-align: right; min-width: 80px;">
+                    <div>阅读: 12.5w</div>
+                    <div>评论: 342</div>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <img src="https://picsum.photos/seed/ghost2/200/200" alt="封面" class="list-img">
+                <div class="list-content">
+                    <div class="list-meta">异闻 · 悬疑</div>
+                    <h3 class="list-title">双生子的诅咒</h3>
+                    <p class="list-desc">传说中双胞胎之间存在着某种神秘的羁绊。如果其中一人不幸早夭，活下来的那个将会承载所有的记忆与痛苦，甚至变成另一种存在...</p>
+                </div>
+                <div class="list-meta" style="text-align: right; min-width: 80px;">
+                    <div>阅读: 8.9w</div>
+                    <div>评论: 210</div>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <img src="https://picsum.photos/seed/ghost3/200/200" alt="封面" class="list-img">
+                <div class="list-content">
+                    <div class="list-meta">民俗 · 考据</div>
+                    <h3 class="list-title">纸扎人的眼泪</h3>
+                    <p class="list-desc">在传统的祭祀文化中，纸扎人本是无生命的祭品。但流传下来的故事却说，在特定的时间节点，它们会拥有了人类的情感...</p>
+                </div>
+                <div class="list-meta" style="text-align: right; min-width: 80px;">
+                    <div>阅读: 15.2w</div>
+                    <div>评论: 567</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Grid -->
+        <section id="culture" class="container">
+            <div class="section-header">
+                <h2 class="section-title">分类浏览</h2>
+                <a href="#" class="section-link">更多分类 &rarr;</a>
+            </div>
+            
+            <div class="grid-3">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/culture1/400/250" alt="民俗" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">民俗文化</span>
+                        <h3 class="card-title">地方禁忌与传说</h3>
+                        <p class="card-excerpt">不同地区有着独特的禁忌习俗，这些习俗往往源于古代对自然力量的敬畏。</p>
+                        <div class="card-footer">
+                            <span>更新中</span>
+                            <span>12 篇文章</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/culture2/400/250" alt="妖怪" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">东方妖怪</span>
+                        <h3 class="card-title">山海经异兽录</h3>
+                        <p class="card-excerpt">重新解读《山海经》中的异兽，探索它们在现代社会中的隐喻与象征。</p>
+                        <div class="card-footer">
+                            <span>完结</span>
+                            <span>45 篇文章</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/culture3/400/250" alt="都市" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">都市异闻</span>
+                        <h3 class="card-title">城市角落的秘密</h3>
+                        <p class="card-excerpt">高楼林立之下，隐藏着不为人知的秘密。深夜的地铁、废弃的医院...</p>
+                        <div class="card-footer">
+                            <span>连载中</span>
+                            <span>28 篇文章</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="guide" class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        网站上的故事都是真实的吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        本站大部分内容为原创或精选的文学创作、民间传说整理及对超自然现象的虚构化演绎，旨在提供娱乐体验和民俗文化参考。部分内容基于真实事件改编，但已做艺术加工，请勿完全当作现实生活的指南。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        如果遇到灵异现象应该怎么办？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        首先保持冷静，检查环境因素（如风声、回声、光线折射）。如果确认是异常情况，建议及时离开现场并寻求帮助。在传统文化中，也有“净宅”、“请神”等说法，建议咨询专业人士。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        如何投稿我的故事？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        我们欢迎原创的灵异故事、民俗考证及都市异闻投稿。请将稿件发送至我们的投稿邮箱，并在邮件标题注明“投稿”。我们将对稿件进行审核，录用后将在“双生子的诅咒”或相关栏目发布。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>◆</span> 妹妹不是人
+                    </a>
+                    <p>探索未知，敬畏生命。这是一个关于灵异、民俗与都市传说的地方。在这里，我们用文字构建一个既真实又虚幻的世界。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">灵异故事</a></li>
+                        <li><a href="#">民俗文化</a></li>
+                        <li><a href="#">异闻指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容分类</h4>
+                    <ul>
+                        <li><a href="#">东方妖怪</a></li>
+                        <li><a href="#">西方鬼怪</a></li>
+                        <li><a href="#">都市传说</a></li>
+                        <li><a href="#">未解之谜</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">投稿建议</a></li>
+                        <li><a href="#">合作洽谈</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 妹妹不是人. All Rights Reserved. 本站内容仅供娱乐与参考。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
