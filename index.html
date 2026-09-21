@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩剧我为你着迷 - 全面解析热门韩剧剧情、角色分析及观看指南。为您提供最新的韩剧资讯、演员资料以及经典剧集回顾，助您不错过任何精彩瞬间。">
+    <meta name="keywords" content="韩剧我为你着迷,韩剧推荐,韩剧剧情,韩剧演员,韩剧观看指南">
+    <title>韩剧我为你着迷-热门韩剧深度解析与观看指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --spacing-unit: 1rem;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-sub);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><circle cx="50" cy="50" r="40" fill="white"/></svg>');
+            background-size: 200px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(253, 121, 168, 0.4);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Grid for Shows */
+        .show-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .show-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .show-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .show-poster {
+            height: 280px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .show-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .show-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .show-info {
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .show-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .show-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .show-genre {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-sub);
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.8rem;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-number {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-right: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .rank-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .rank-info span {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Detail/Featured Section */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+
+        .featured-poster {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .featured-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .featured-content .rating {
+            color: #f1c40f;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .featured-content p {
+            color: var(--text-sub);
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 4rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #b2bec3;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #636e72;
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+            
+            nav {
+                display: none; /* Simplify for mobile demo */
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                position: static;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .show-poster {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                <span>韩剧我为你着迷</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新剧集</a></li>
+                    <li><a href="#">经典回顾</a></li>
+                    <li><a href="#">演员图鉴</a></li>
+                    <li><a href="#">影视资讯</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索韩国电视剧的<br>极致浪漫与深刻剧情</h1>
+                <p>汇集最新韩剧资讯、深度影评与观看指南，带您走进精彩纷呈的韩流世界。</p>
+                <a href="#latest" class="cta-button">开始探索</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content -->
+            <div class="main-content">
+                
+                <!-- Featured Highlight -->
+                <section id="featured">
+                    <div class="section-header">
+                        <h2 class="section-title">本周焦点</h2>
+                        <a href="#" class="view-all">查看全部 &rarr;</a>
+                    </div>
+                    <div class="featured-grid">
+                        <img src="https://picsum.photos/seed/kdrama1/600/400" alt="韩剧海报" class="featured-poster">
+                        <div class="featured-content">
+                            <h2>浪漫满屋：爱的回归</h2>
+                            <span class="rating">★★★★★ 9.2分</span>
+                            <div class="tags">
+                                <span class="tag">爱情</span>
+                                <span class="tag">喜剧</span>
+                                <span class="tag">治愈</span>
+                            </div>
+                            <p>重温经典浪漫喜剧，讲述了一段充满误会与欢笑的爱情故事。在这部剧中，您将看到现代都市男女在爱情中的挣扎与成长，感受久违的甜蜜与感动。</p>
+                            <div style="display: flex; gap: 1rem;">
+                                <a href="#" class="cta-button">立即观看</a>
+                                <a href="#" class="btn-outline">剧情介绍</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest Updates -->
+                <section id="latest">
+                    <div class="section-header">
+                        <h2 class="section-title">最新更新</h2>
+                        <a href="#" class="view-all">查看全部 &rarr;</a>
+                    </div>
+                    <div class="show-grid">
+                        <article class="show-card">
+                            <div class="show-poster">
+                                <img src="https://picsum.photos/seed/kdrama2/300/400" alt="韩剧封面">
+                                <span class="show-badge">更新中</span>
+                            </div>
+                            <div class="show-info">
+                                <h3 class="show-title">孤独的美食家：首尔篇</h3>
+                                <div class="show-meta">
+                                    <span>2023</span>
+                                    <span>12集</span>
+                                </div>
+                                <span class="show-genre">美食 / 纪录</span>
+                            </div>
+                        </article>
+
+                        <article class="show-card">
+                            <div class="show-poster">
+                                <img src="https://picsum.photos/seed/kdrama3/300/400" alt="韩剧封面">
+                                <span class="show-badge">新剧</span>
+                            </div>
+                            <div class="show-info">
+                                <h3 class="show-title">财阀家的小儿子</h3>
+                                <div class="show-meta">
+                                    <span>2023</span>
+                                    <span>16集</span>
+                                </div>
+                                <span class="show-genre">商战 / 悬疑</span>
+                            </div>
+                        </article>
+
+                        <article class="show-card">
+                            <div class="show-poster">
+                                <img src="https://picsum.photos/seed/kdrama4/300/400" alt="韩剧封面">
+                                <span class="show-badge">完结</span>
+                            </div>
+                            <div class="show-info">
+                                <h3 class="show-title">黑暗荣耀</h3>
+                                <div class="show-meta">
+                                    <span>2022</span>
+                                    <span>8集</span>
+                                </div>
+                                <span class="show-genre">复仇 / 惊悚</span>
+                            </div>
+                        </article>
+
+                        <article class="show-card">
+                            <div class="show-poster">
+                                <img src="https://picsum.photos/seed/kdrama5/300/400" alt="韩剧封面">
+                                <span class="show-badge">更新中</span>
+                            </div>
+                            <div class="show-info">
+                                <h3 class="show-title">眼泪女王</h3>
+                                <div class="show-meta">
+                                    <span>2024</span>
+                                    <span>16集</span>
+                                </div>
+                                <span class="show-genre">爱情 / 财阀</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Top Rated -->
+                <section id="top-rated">
+                    <div class="section-header">
+                        <h2 class="section-title">高分必看</h2>
+                        <a href="#" class="view-all">查看全部 &rarr;</a>
+                    </div>
+                    <div class="show-grid">
+                        <article class="show-card">
+                            <div class="show-poster">
+                                <img src="https://picsum.photos/seed/kdrama6/300/400" alt="韩剧封面">
+                            </div>
+                            <div class="show-info">
+                                <h3 class="show-title">请回答1988</h3>
+                                <div class="show-meta">
+                                    <span>2015</span>
+                                    <span>20集</span>
+                                </div>
+                                <span class="show-genre">怀旧 / 家庭</span>
+                            </div>
+                        </article>
+
+                        <article class="show-card">
+                            <div class="show-poster">
+                                <img src="https://picsum.photos/seed/kdrama7/300/400" alt="韩剧封面">
+                            </div>
+                            <div class="show-info">
+                                <h3 class="show-title">信号 Signal</h3>
+                                <div class="show-meta">
+                                    <span>2016</span>
+                                    <span>16集</span>
+                                </div>
+                                <span class="show-genre">悬疑 / 警察</span>
+                            </div>
+                        </article>
+
+                        <article class="show-card">
+                            <div class="show-poster">
+                                <img src="https://picsum.photos/seed/kdrama8/300/400" alt="韩剧封面">
+                            </div>
+                            <div class="show-info">
+                                <h3 class="show-title">机智的医生生活</h3>
+                                <div class="show-meta">
+                                    <span>2020</span>
+                                    <span>50集</span>
+                                </div>
+                                <span class="show-genre">职场 / 治愈</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="widget">
+                    <h3 class="widget-title">热门排行榜</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-number">1</span>
+                            <div class="rank-info">
+                                <h4>鬼怪</h4>
+                                <span>奇幻 / 爱情</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">2</span>
+                            <div class="rank-info">
+                                <h4>太阳的后裔</h4>
+                                <span>军事 / 爱情</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">3</span>
+                            <div class="rank-info">
+                                <h4>我的大叔</h4>
+                                <span>剧情 / 亲情</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">4</span>
+                            <div class="rank-info">
+                                <h4>天空之城</h4>
+                                <span>教育 / 悬疑</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">5</span>
+                            <div class="rank-info">
+                                <h4>蓝色大海的传说</h4>
+                                <span>爱情 / 动画</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">热门标签</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">宋慧乔</a>
+                        <a href="#" class="tag">李敏镐</a>
+                        <a href="#" class="tag">玄彬</a>
+                        <a href="#" class="tag">朴信惠</a>
+                        <a href="#" class="tag">爱情剧</a>
+                        <a href="#" class="tag">复仇剧</a>
+                        <a href="#" class="tag">韩剧推荐</a>
+                        <a href="#" class="tag">Netflix</a>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">阅读指南</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 1rem;">
+                        本站提供最新韩剧的剧情介绍、角色分析及观看渠道建议。请支持正版影视平台。
+                    </p>
+                    <a href="#" class="btn-outline" style="width: 100%; text-align: center;">了解详情</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>韩剧我为你着迷</h3>
+                <p style="font-size: 0.9rem; color: #b2bec3; line-height: 1.8;">
+                    专注于韩国电视剧的资讯分享与深度解析。我们致力于为剧迷提供最及时、最全面的韩流动态，带您领略韩剧的独特魅力。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>快速导航</h3>
+                <ul>
+                    <li><a href="#">最新剧集</a></li>
+                    <li><a href="#">经典榜单</a></li>
+                    <li><a href="#">演员介绍</a></li>
+                    <li><a href="#">影视资讯</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>常见问题</h3>
+                <ul>
+                    <li><a href="#">在哪里观看韩剧？</a></li>
+                    <li><a href="#">如何评分？</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>关注我们</h3>
+                <ul>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 韩剧我为你着迷 版权所有. 本站内容仅供学习与交流使用.</p>
+        </div>
+    </footer>
+
+</body>
+                              </html>
