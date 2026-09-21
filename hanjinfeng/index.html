@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩金峰-知名投资人、企业家与行业观察者</title>
+    <meta name="description" content="韩金峰官方网站，提供关于知名投资人、企业家韩金峰的生平简介、主要成就、行业观点、公开演讲及深度访谈内容。">
+    <meta name="keywords" content="韩金峰, 投资人, 企业家, 行业观察, 创业指导, 风险投资, 商业模式">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --font-main: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        .section-desc {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-cta {
+            background-color: var(--accent-color);
+            color: var(--white) !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-cta:hover {
+            background-color: #a93226;
+            color: var(--white) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+            background-color: #ddd;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-role {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-info-list {
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .profile-info-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .profile-info-list strong {
+            color: var(--primary-color);
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        /* Insights & Articles */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .article-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .quote-author {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #bdc3c7;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(192, 57, 43, 0.1);
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: var(--white);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">韩金<span>峰</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#insights">观点</a></li>
+                    <li><a href="#projects">项目</a></li>
+                    <li><a href="#contact" class="btn-cta">联系合作</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>韩金峰</h1>
+            <p>深耕数字经济与硬科技创新领域的资深投资人、企业战略顾问。致力于发现并培育具有长期价值的商业创新。</p>
+            <div class="hero-badges">
+                <span class="badge">风险投资专家</span>
+                <span class="badge">数字化转型顾问</span>
+                <span class="badge">行业观察者</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="profile-card">
+                    <img src="https://picsum.photos/seed/hanjinfeng/400/400" alt="韩金峰照片" class="profile-img">
+                    <h3 class="profile-name">韩金峰</h3>
+                    <p class="profile-role">联合创始人 / 投资合伙人</p>
+                    <ul class="profile-info-list">
+                        <li><strong>从业年限：</strong>15年+</li>
+                        <li><strong>专注领域：</strong>TMT、AI、新能源</li>
+                        <li><strong>过往成就：</strong>主导投资5家独角兽企业</li>
+                        <li><strong>教育背景：</strong>清华大学 MBA</li>
+                    </ul>
+                </div>
+                <div class="about-content">
+                    <h2>关于韩金峰</h2>
+                    <p>韩金峰是一位在商业投资与战略咨询领域拥有深厚积累的实践者。拥有超过十五年的行业经验，他见证了互联网经济的爆发式增长，并敏锐地捕捉到硬科技与数字化转型的时代机遇。</p>
+                    <p>作为多家知名科技公司的早期投资人，韩金峰擅长从商业模式、团队架构及市场趋势三个维度评估项目价值。他主张“长期主义”，认为真正的创新需要时间沉淀，反对短期投机行为。</p>
+                    <p>除了投资工作，韩金峰还定期受邀担任行业峰会演讲嘉宾，分享他对宏观经济、技术变革以及企业管理的独到见解，致力于为创业者提供可落地的指导建议。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <p class="quote-text">“投资不仅是关于金钱的流动，更是关于对未来的判断。在不确定性中寻找确定性，是每一位投资人的必修课。”</p>
+            <p class="quote-author">— 韩金峰</p>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">核心观点与文章</h2>
+                <p class="section-desc">韩金峰关于行业趋势、投资策略及企业管理的深度思考。</p>
+            </div>
+            
+            <div class="insights-grid">
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/tech1/400/250" alt="数字化转型文章配图" class="article-img">
+                    <div class="article-body">
+                        <span class="article-tag">数字化转型</span>
+                        <h3 class="article-title">传统企业数字化转型的三大误区</h3>
+                        <p class="article-excerpt">许多企业在转型过程中陷入误区，将数字化等同于上系统或买设备。真正的数字化应当是业务流与数据流的深度融合。</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/tech2/400/250" alt="人工智能文章配图" class="article-img">
+                    <div class="article-body">
+                        <span class="article-tag">人工智能</span>
+                        <h3 class="article-title">AI时代：投资机会在哪里？</h3>
+                        <p class="article-excerpt">随着大模型技术的突破，AI应用层将迎来爆发。本文分析了从底层算力到上层应用的完整投资链条及潜在风险。</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/tech3/400/250" alt="企业管理文章配图" class="article-img">
+                    <div class="article-body">
+                        <span class="article-tag">企业管理</span>
+                        <h3 class="article-title">如何打造高绩效创新团队</h3>
+                        <p class="article-excerpt">在快速变化的市场环境中，传统的科层制管理已失效。探讨扁平化组织、激励机制与企业文化对创新的重要性。</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects/Portfolio Section -->
+    <section id="projects" class="section" style="background-color: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">关注领域与案例</h2>
+                <p class="section-desc">韩金峰目前重点关注的行业赛道及代表性案例。</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                <div style="padding: 2rem; border: 1px solid #eee; border-radius: 8px;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🚀</div>
+                    <h3>科技创新</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">关注芯片、半导体、新材料等底层技术突破。</p>
+                </div>
+                <div style="padding: 2rem; border: 1px solid #eee; border-radius: 8px;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
+                    <h3>数字产业</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">聚焦SaaS服务、云计算及企业级解决方案。</p>
+                </div>
+                <div style="padding: 2rem; border: 1px solid #eee; border-radius: 8px;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🌱</div>
+                    <h3>绿色能源</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">投资清洁能源技术及碳中和相关产业链。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系与咨询</h2>
+                <p class="section-desc">如需商务合作、演讲邀约或行业咨询，请通过下方表单与我们联系。</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>电子邮箱</h4>
+                            <p>contact@hanjinfeng.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>办公地址</h4>
+                            <p>北京市朝阳区金融中心 A座 28层</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>社交媒体</h4>
+                            <p>关注获取最新动态：LinkedIn, WeChat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快与您联系。');">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="请输入您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" placeholder="请输入您的邮箱地址" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言内容</label>
+                        <textarea id="message" rows="5" placeholder="请简述您的需求或咨询事项..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-cta" style="width: 100%; border: none; cursor: pointer;">发送留言</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#about">关于我</a>
+                <a href="#insights">观点文章</a>
+                <a href="#projects">投资领域</a>
+                <a href="#contact">联系合作</a>
+            </div>
+            <p>&copy; 2023 韩金峰. All Rights Reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #7f8c8d;">本网站内容仅供参考，不代表任何投资建议。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
