@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="华业玫瑰东方是位于城市核心区域的品质住宅项目，提供现代化社区规划、完善配套及舒适居住环境。本站详细介绍项目区位、户型图、周边配套及购房指南。">
+    <meta name="keywords" content="华业玫瑰东方, 华业玫瑰东方房价, 华业玫瑰东方楼盘, 华业玫瑰东方户型图, 华业玫瑰东方售楼处">
+    <title>华业玫瑰东方-品质住宅与社区生活指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #b07d56; /* 暖棕色调，呼应玫瑰与建筑质感 */
+            --primary-hover: #946642;
+            --secondary-color: #f4f1ea; /* 米白色背景，营造温馨居住氛围 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        .text-center { text-align: center; }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/huaye/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Features / Highlights */
+        .highlights {
+            background-color: var(--white);
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-card {
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(176, 125, 86, 0.1);
+        }
+
+        .highlight-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .highlight-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .highlight-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Location Map */
+        .location {
+            background-color: var(--secondary-color);
+        }
+
+        .location-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .location-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .location-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .location-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .location-detail h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .location-detail p {
+            color: var(--text-light);
+        }
+
+        .location-map {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* House Models */
+        .models {
+            background-color: var(--white);
+        }
+
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .model-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        .model-img {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .model-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .model-card:hover .model-img img {
+            transform: scale(1.05);
+        }
+
+        .model-info {
+            padding: 1.5rem;
+        }
+
+        .model-type {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .model-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .model-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1rem;
+        }
+
+        /* Community Facilities */
+        .facilities {
+            background-color: #fafafa;
+        }
+
+        .facilities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .facility-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid transparent;
+        }
+
+        .facility-item:hover {
+            border-color: var(--primary-color);
+        }
+
+        .facility-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .facility-name {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .location-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">华业玫瑰东方</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">项目概况</a></li>
+                    <li><a href="#location">地理位置</a></li>
+                    <li><a href="#models">户型鉴赏</a></li>
+                    <li><a href="#facilities">社区配套</a></li>
+                </ul>
+            </nav>
+            <a href="tel:400-888-8888" class="btn-primary">咨询热线</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>华业玫瑰东方</h1>
+            <p>城市核心区 · 精工品质 · 宜居典范</p>
+            <a href="#models" class="btn-primary">浏览户型</a>
+            <a href="#contact" class="btn-primary" style="background-color: transparent; border: 1px solid rgba(255,255,255,0.8); margin-left: 10px;">预约看房</a>
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section-padding highlights">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">项目亮点</h2>
+                <p class="section-subtitle">重新定义城市居住标准，打造全龄段理想家园</p>
+            </div>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏢</div>
+                    <h3>黄金地段</h3>
+                    <p>占据城市核心发展轴线，交通网络四通八达，尽享城市便捷生活。</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🌿</div>
+                    <h3>园林景观</h3>
+                    <p>约40%超低密容积率，打造多层次立体园林，推窗见景，满眼绿意。</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🛋️</div>
+                    <h3>精工品质</h3>
+                    <p>严选品牌建材，匠心雕琢细节，从入户大堂到公共区域，尽显尊贵。</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🚗</div>
+                    <h3>智慧社区</h3>
+                    <p>引入智慧安防系统，人脸识别、智能门禁，为家庭安全保驾护航。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="section-padding location">
+        <div class="container location-container">
+            <div class="location-info">
+                <h2>优越区位 · 交通便捷</h2>
+                <div class="location-detail">
+                    <h4>📍 城市副中心</h4>
+                    <p>项目紧邻城市主干道，距离地铁站仅步行10分钟，轻松连接城市各区域。</p>
+                </div>
+                <div class="location-detail">
+                    <h4>🛍️ 商业繁华</h4>
+                    <p>周边环绕大型购物中心、高端影院及特色商业街区，满足一站式生活需求。</p>
+                </div>
+                <div class="location-detail">
+                    <h4>🏫 教育资源</h4>
+                    <p>周边名校林立，从幼儿园到高中教育资源丰富，为下一代成长保驾护航。</p>
+                </div>
+                <div class="location-detail">
+                    <h4>🏥 医疗配套</h4>
+                    <p>附近设有三甲医院及社区医疗中心，健康生活触手可及。</p>
+                </div>
+            </div>
+            <div class="location-map">
+                <!-- 使用 Google Maps 预览作为占位符 -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- House Models -->
+    <section id="models" class="section-padding models">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">户型鉴赏</h2>
+                <p class="section-subtitle">科学的空间布局，极致的居住体验</p>
+            </div>
+            <div class="model-grid">
+                <!-- Model 1 -->
+                <article class="model-card">
+                    <div class="model-img">
+                        <img src="https://picsum.photos/seed/room1/400/300.jpg" alt="华业玫瑰东方 108平米三居室">
+                    </div>
+                    <div class="model-info">
+                        <span class="model-type">经典三居</span>
+                        <h3 class="model-title">108㎡ 舒适三房两厅</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">全明户型，南北通透，主卧带衣帽间，居住舒适度极高。</p>
+                        <div class="model-meta">
+                            <span>建筑面积: 108㎡</span>
+                            <a href="#" style="color: var(--primary-color); font-weight: 600;">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Model 2 -->
+                <article class="model-card">
+                    <div class="model-img">
+                        <img src="https://picsum.photos/seed/room2/400/300.jpg" alt="华业玫瑰东方 128平米四居室">
+                    </div>
+                    <div class="model-info">
+                        <span class="model-type">改善四居</span>
+                        <h3 class="model-title">128㎡ 阔绰四房两厅</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">超大面宽客厅，独立书房设计，满足三代同堂的居住梦想。</p>
+                        <div class="model-meta">
+                            <span>建筑面积: 128㎡</span>
+                            <a href="#" style="color: var(--primary-color); font-weight: 600;">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Model 3 -->
+                <article class="model-card">
+                    <div class="model-img">
+                        <img src="https://picsum.photos/seed/room3/400/300.jpg" alt="华业玫瑰东方 89平米两居室">
+                    </div>
+                    <div class="model-info">
+                        <span class="model-type">灵动两居</span>
+                        <h3 class="model-title">89㎡ 轻奢两房两厅</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">高得房率设计，功能分区明确，是年轻家庭的理想之选。</p>
+                        <div class="model-meta">
+                            <span>建筑面积: 89㎡</span>
+                            <a href="#" style="color: var(--primary-color); font-weight: 600;">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section id="facilities" class="section-padding facilities">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">社区配套</h2>
+                <p class="section-subtitle">全龄化社区，满足不同生活需求</p>
+            </div>
+            <div class="facilities-list">
+                <div class="facility-item">
+                    <div class="facility-icon">🏊</div>
+                    <span class="facility-name">恒温泳池</span>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🎾</div>
+                    <span class="facility-name">室外球场</span>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🧒</div>
+                    <span class="facility-name">儿童乐园</span>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🏃</div>
+                    <span class="facility-name">健身中心</span>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">☕</div>
+                    <span class="facility-name">邻里会所</span>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🌳</div>
+                    <span class="facility-name">中央花园</span>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🛒</div>
+                    <span class="facility-name">生鲜超市</span>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon">🅿️</div>
+                    <span class="facility-name">智能车库</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">常见问题</h2>
+                <p class="section-subtitle">关于华业玫瑰东方的购房疑问解答</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="highlight-card" style="margin-bottom: 1rem; text-align: left;">
+                    <h3 style="margin-bottom: 0.5rem;">Q: 华业玫瑰东方的产权年限是多少？</h3>
+                    <p style="color: #666;">A: 项目为普通住宅性质，产权年限通常为70年。</p>
+                </div>
+                <div class="highlight-card" style="margin-bottom: 1rem; text-align: left;">
+                    <h3 style="margin-bottom: 0.5rem;">Q: 项目什么时候交房？</h3>
+                    <p style="color: #666;">A: 具体交房时间请咨询售楼处，以开发商最终公布为准。</p>
+                </div>
+                <div class="highlight-card" style="margin-bottom: 1rem; text-align: left;">
+                    <h3 style="margin-bottom: 0.5rem;">Q: 购房有什么优惠活动？</h3>
+                    <p style="color: #666;">A: 购房时请咨询现场置业顾问，了解当前的特价房或促销政策。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>华业玫瑰东方</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">致力于为城市精英打造高品质居住空间，将自然与人文完美融合。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">项目概况</a></li>
+                        <li><a href="#location">交通区位</a></li>
+                        <li><a href="#models">户型图</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="footer-links">
+                        <li>电话: 400-888-8888</li>
+                        <li>地址: 城市核心区 [具体路号]</li>
+                        <li>邮箱: info@huaye-rose.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 华业玫瑰东方 版权所有 | 本页面仅为展示用途，不构成要约邀请</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
