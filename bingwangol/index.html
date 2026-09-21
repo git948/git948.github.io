@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="兵王OL - 经典硬核射击MMORPG网页游戏。沉浸式战场体验，真实枪械改装，跨服竞技对战，打造你的专属王牌战士。">
+    <meta name="keywords" content="兵王OL, 网页游戏, 硬核射击, MMORPG, 枪战游戏, 网游攻略">
+    <title>兵王OL - 硬核射击MMORPG网页游戏</title>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #457b9d;
+            --bg-dark: #0f1115;
+            --bg-card: #1a1d24;
+            --text-main: #f1faee;
+            --text-muted: #a8dadc;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --spacing-unit: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-main);
+            color: var(--bg-dark);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 17, 21, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(15, 17, 21, 0.7), rgba(15, 17, 21, 0.8)), url('https://picsum.photos/seed/bingwangol/1920/1080') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--bg-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Game Modes */
+        .game-modes {
+            padding: 80px 0;
+            background-color: #15171d;
+        }
+
+        .mode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .mode-card {
+            position: relative;
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .mode-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .mode-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .mode-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 20px;
+        }
+
+        .mode-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .mode-overlay p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* News & Updates */
+        .news {
+            padding: 80px 0;
+            background-color: var(--bg-dark);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .news-main {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .news-main img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 30px;
+        }
+
+        .news-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .news-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .news-list {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .news-item h4:hover {
+            color: var(--primary-color);
+        }
+
+        .news-item span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0c0f;
+            padding: 60px 0 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">兵王<span>OL</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#features">特色玩法</a></li>
+                    <li><a href="#modes">游戏模式</a></li>
+                    <li><a href="#news">游戏资讯</a></li>
+                    <li><a href="#download">下载游戏</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-secondary" style="padding: 8px 20px; font-size: 0.9rem;">登录</a>
+                <a href="#" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">注册</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>重燃战火，重铸荣耀</h1>
+                <p>加入《兵王OL》，体验最硬核的写实枪械射击MMORPG。在硝烟弥漫的战场上，通过战术配合与精准射击，证明你是真正的兵王。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">立即开始战斗</a>
+                    <a href="#features" class="btn btn-secondary">了解游戏特色</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">硬核射击体验</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🔫</div>
+                        <h3>真实枪械改装</h3>
+                        <p>深度还原现实中的枪械结构，支持从枪管、瞄准镜到枪口制退器的全方位改装。每一颗螺丝的调整都将影响弹道与后坐力。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>战术竞技系统</h3>
+                        <p>摒弃无脑突脸，强调战术走位与团队配合。利用掩体、烟雾弹和手雷，在复杂的战场环境中制定最优作战方案。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>超大开放地图</h3>
+                        <p>广袤的沙漠、丛林与废弃都市，每一片区域都隐藏着不同的资源与危机。探索未知，发现隐藏的战术点位。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Modes Section -->
+        <section id="modes" class="game-modes">
+            <div class="container">
+                <h2 class="section-title">多元战场模式</h2>
+                <div class="mode-grid">
+                    <div class="mode-card">
+                        <img src="https://picsum.photos/seed/battlefield1/400/300" alt="团队竞技模式">
+                        <div class="mode-overlay">
+                            <h3>团队竞技</h3>
+                            <p>快速交火，极限反应</p>
+                        </div>
+                    </div>
+                    <div class="mode-card">
+                        <img src="https://picsum.photos/seed/sniper/400/300" alt="狙击对决模式">
+                        <div class="mode-overlay">
+                            <h3>狙击对决</h3>
+                            <p>一击必杀，决胜千里</p>
+                        </div>
+                    </div>
+                    <div class="mode-card">
+                        <img src="https://picsum.photos/seed/assault/400/300" alt="突袭模式">
+                        <div class="mode-overlay">
+                            <h3>突袭模式</h3>
+                            <p>攻防转换，策略为王</p>
+                        </div>
+                    </div>
+                    <div class="mode-card">
+                        <img src="https://picsum.photos/seed/warfare/400/300" alt="大规模团战">
+                        <div class="mode-overlay">
+                            <h3>大规模团战</h3>
+                            <p>千人同屏，史诗对决</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="news">
+            <div class="container">
+                <h2 class="section-title">最新动态</h2>
+                <div class="news-grid">
+                    <div class="news-main">
+                        <img src="https://picsum.photos/seed/newupdate/800/400" alt="游戏最新版本更新">
+                        <div class="news-content">
+                            <h3>【版本更新】S7赛季“绝境求生”全面开启</h3>
+                            <div class="news-meta">
+                                <span>2023-10-27</span>
+                                <span>作者：官方运营组</span>
+                                <span>浏览：12,405</span>
+                            </div>
+                            <p>新地图“废弃工业区”上线，带来全新的载具系统与高难度副本挑战。S7赛季通行证已上线，海量限定时装等你获取。</p>
+                            <a href="#" style="color: var(--primary-color); font-weight: 600; margin-top: 15px; display: inline-block;">阅读全文 &rarr;</a>
+                        </div>
+                    </div>
+                    <aside class="news-list">
+                        <h4 style="margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 5px;">最新公告</h4>
+                        <div class="news-item">
+                            <a href="#"><h4>关于维护服务器稳定性的通知</h4></a>
+                            <span>10-25</span>
+                        </div>
+                        <div class="news-item">
+                            <a href="#"><h4>“国庆狂欢”限时活动开启</h4></a>
+                            <span>10-20</span>
+                        </div>
+                        <div class="news-item">
+                            <a href="#"><h4>职业平衡性调整公告</h4></a>
+                            <span>10-15</span>
+                        </div>
+                        <div class="news-item">
+                            <a href="#"><h4>新手引导系统优化说明</h4></a>
+                            <span>10-10</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download CTA -->
+        <section id="download" style="padding: 80px 0; background: linear-gradient(rgba(29, 53, 87, 0.9), rgba(29, 53, 87, 0.9)), url('https://picsum.photos/seed/techbg/1920/600') center/cover; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">准备好成为兵王了吗？</h2>
+                <p style="font-size: 1.2rem; color: #ddd; margin-bottom: 40px;">无需下载客户端，浏览器直接畅玩。立即注册，领取新手专属狙击枪械礼包。</p>
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <button class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px;">立即免费注册</button>
+                    <button class="btn btn-secondary" style="font-size: 1.1rem; padding: 15px 40px;">下载客户端</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display: inline-block;">兵王<span>OL</span></a>
+                    <p style="color: #666; font-size: 0.9rem;">专注于为玩家提供最硬核、最真实的军事射击网页游戏体验。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏指南</h4>
+                    <ul>
+                        <li><a href="#">新手入门</a></li>
+                        <li><a href="#">职业介绍</a></li>
+                        <li><a href="#">枪械图鉴</a></li>
+                        <li><a href="#">装备大全</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持中心</h4>
+                    <ul>
+                        <li><a href="#">玩家社区</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">反馈建议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">官方微信公众号</a></li>
+                        <li><a href="#">官方QQ群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 兵王OL 运营团队 版权所有 | 仅供展示使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
