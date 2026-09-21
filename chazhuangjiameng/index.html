@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="茶庄加盟-专业茶企品牌合作与投资分析指南。提供加盟流程、投资预算、选址要求、运营支持及成功案例，助您开启绿色财富事业。">
+    <meta name="keywords" content="茶庄加盟,茶叶加盟,茶饮品牌加盟,茶叶店投资,茶企合作">
+    <title>茶庄加盟-品牌合作与投资运营全案指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4e342e;
+            --secondary-color: #8d6e63;
+            --accent-color: #d84315;
+            --bg-color: #fdfbf7;
+            --text-color: #333;
+            --light-text: #666;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.8);
+            font-size: 12px;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-wrapper {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #bf360c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)), url('https://picsum.photos/seed/tea-plantation/1600/900') center/cover no-repeat;
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Process */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 0;
+        }
+
+        .step-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            min-width: 200px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .step-item h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Investment Calculator */
+        .calculator-section {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .calc-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .calc-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .calc-item:last-child {
+            border-bottom: none;
+        }
+
+        .calc-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+
+        .calc-form {
+            background: var(--bg-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--light-text);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span>全国服务热线：400-123-4567</span>
+            <span>工作时间：周一至周日 9:00-18:00</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="nav-wrapper">
+            <div class="logo">
+                <span>🍃</span> 茗香天下
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#benefits">加盟优势</a></li>
+                    <li><a href="#process">合作流程</a></li>
+                    <li><a href="#investment">投资预算</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">免费获取方案</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>开启您的茶庄财富之路</h1>
+            <p>依托成熟的供应链体系与品牌运营支持，助您在茶饮市场中稳操胜券。从选址到运营，我们提供全流程扶持。</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-btn">立即咨询加盟</a>
+                <a href="#process" class="btn-outline">了解合作流程</a>
+            </div>
+        </section>
+
+        <section id="benefits" class="container">
+            <div class="section-header">
+                <h2>为什么选择与我们合作？</h2>
+                <p>我们不仅仅是提供茶叶，更是提供一套完整的商业解决方案，让您的投资更有保障。</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌱</div>
+                    <h3>源头直采</h3>
+                    <p>拥有云南、福建等地核心茶园直采权，确保茶叶品质纯正，成本优势明显。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>品牌背书</h3>
+                    <p>行业知名品牌，拥有完善的VI视觉系统与市场推广支持，降低获客成本。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h3>培训体系</h3>
+                    <p>提供茶艺师、店长及销售技能全方位培训，确保每位加盟商都能快速上手。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>物流配送</h3>
+                    <p>建立全国仓储物流中心，保证货物快速送达，库存管理智能化，降低损耗。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="container">
+            <div class="section-header">
+                <h2>标准合作流程</h2>
+                <p>透明、高效的合作流程，确保双方信息对等，合作顺利推进。</p>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>提交申请</h3>
+                    <p>填写加盟申请表，提供店铺意向及个人资料。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>资质审核</h3>
+                    <p>总部对申请方进行综合评估，确认合作意向。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>实地考察</h3>
+                    <p>双方实地考察，确认选址及装修方案。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>签约开业</h3>
+                    <p>签署合同，缴纳费用，总部派驻团队协助开业。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="investment" class="container">
+            <div class="section-header">
+                <h2>投资预算参考</h2>
+                <p>合理的资金规划是成功的关键。以下为标准店型的投资估算范围。</p>
+            </div>
+            <div class="calculator-section">
+                <div class="calc-grid">
+                    <div class="calc-info">
+                        <h3>投资构成说明</h3>
+                        <div class="calc-item">
+                            <strong>加盟费</strong>
+                            <p>品牌使用及技术支持费用，一次性支付。</p>
+                        </div>
+                        <div class="calc-item">
+                            <strong>保证金</strong>
+                            <p>履约保证金，合同期满无违约可退还。</p>
+                        </div>
+                        <div class="calc-item">
+                            <strong>装修及设备</strong>
+                            <p>包含店面设计、装修施工及专业茶具设备采购。</p>
+                        </div>
+                        <div class="calc-item">
+                            <strong>首批进货</strong>
+                            <p>开业前需采购的基础茶叶及包装物料。</p>
+                        </div>
+                        <div class="calc-item">
+                            <strong>运营流动资金</strong>
+                            <p>建议预留3-6个月的员工工资及日常运营支出。</p>
+                        </div>
+                    </div>
+                    <div class="calc-form">
+                        <div class="form-group">
+                            <label for="area">店铺面积 (㎡)</label>
+                            <select id="area">
+                                <option value="20">20-30㎡ (标准店)</option>
+                                <option value="50">50-80㎡ (旗舰店)</option>
+                                <option value="100">100㎡以上 (体验馆)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">所在城市</label>
+                            <select id="location">
+                                <option value="1">一线城市</option>
+                                <option value="0.8">二线城市</option>
+                                <option value="0.6">三线及以下城市</option>
+                            </select>
+                        </div>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;">* 估算仅供参考，实际费用请以总部核算为准。</p>
+                        <button class="submit-btn" onclick="alert('感谢您的兴趣！我们的招商经理将在24小时内与您联系。')">获取详细报价</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+                <p>针对加盟商最关心的问题进行详细解答。</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">加盟茶庄需要具备哪些条件？</div>
+                    <div class="faq-answer">
+                        加盟商需具备合法的经营主体资格，拥有良好的商业信誉，认同品牌经营理念，并愿意接受总部的统一管理。同时，需具备一定的资金实力和选址能力。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">总部提供哪些选址支持？</div>
+                    <div class="faq-answer">
+                        总部拥有专业的选址团队，会根据商圈人流量、消费水平及竞争对手情况，提供实地考察与数据分析，协助筛选最佳开店地址。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">前期需要多少人手？</div>
+                    <div class="faq-answer">
+                        标准店型建议配置店长1名、茶艺师2-3名、收银/服务员1-2名。总部培训合格后即可上岗。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">茶叶的保质期及售后服务如何？</div>
+                    <div class="faq-answer">
+                        我们提供保质期内的茶叶支持，如遇质量问题可无条件退换货。同时，总部会定期提供市场资讯与产品更新建议。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p>专注于传统茶文化的现代化运营，致力于为消费者提供高品质的茶饮体验，为加盟商提供稳健的商业回报。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#benefits">加盟优势</a></li>
+                    <li><a href="#process">合作流程</a></li>
+                    <li><a href="#investment">投资预算</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>电话：400-123-4567</li>
+                    <li>邮箱：business@mingxiang.com</li>
+                    <li>地址：中国·杭州市西湖区茶都大道1号</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 茗香天下茶业有限公司 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
