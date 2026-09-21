@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃花源小说-经典文学名著与在线阅读平台</title>
+    <meta name="description" content="桃花源小说网提供陶渊明《桃花源记》原文赏析、译文解读及各类现代经典文学作品在线阅读服务，打造沉浸式文学阅读体验。">
+    <meta name="keywords" content="桃花源小说, 桃花源记, 陶渊明, 经典文学, 在线阅读, 文学赏析">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5d4037;
+            --secondary-color: #8d6e63;
+            --accent-color: #d7ccc8;
+            --text-dark: #3e2723;
+            --text-light: #6d4c41;
+            --bg-light: #fff8f1;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            background-image: radial-gradient(#efebe9 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+            font-size: 14px;
+            font-weight: normal;
+            border: 1px solid var(--secondary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--accent-color);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 5px;
+            width: 150px;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🌸";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            left: -50px;
+            transform: rotate(-15deg);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #4e342e;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 40px;
+        }
+
+        /* Article Section */
+        .article-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .article-header {
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .article-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .article-meta {
+            font-size: 14px;
+            color: var(--text-light);
+            display: flex;
+            gap: 15px;
+        }
+
+        .article-body {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background-color: #efebe9;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--text-dark);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            color: var(--primary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .category-list li {
+            border-bottom: 1px dashed var(--accent-color);
+            padding: 10px 0;
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Related Books */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .book-item {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .book-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: var(--secondary-color);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s;
+        }
+
+        .book-item:hover .book-cover {
+            transform: translateY(-5px);
+        }
+
+        .book-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--text-dark);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 14px;
+            color: #d7ccc8;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 13px;
+            color: #a1887f;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                display: none; /* Simplify for mobile demo */
+            }
+            
+            .header-container {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .article-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                📖 桃花源小说
+                <span>在线阅读</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">古典文学</a></li>
+                    <li><a href="#">现代小说</a></li>
+                    <li><a href="#">诗词歌赋</a></li>
+                    <li><a href="#">作者专栏</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索作品...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>寻觅心灵的净土</h1>
+                <p>在这里，阅读不仅是获取知识的方式，更是一场穿越时空的精神之旅。探索经典，品味人生。</p>
+                <a href="#" class="cta-button">开始阅读</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content -->
+            <section class="content-area">
+                <article class="article-card">
+                    <header class="article-header">
+                        <h2 class="article-title">桃花源记：陶渊明笔下的理想世界</h2>
+                        <div class="article-meta">
+                            <span>作者：陶渊明</span>
+                            <span>分类：文言文</span>
+                            <span>发布时间：2023-10-24</span>
+                        </div>
+                    </header>
+                    <div class="article-body">
+                        <p>晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷。渔人甚异之，复前行，欲穷其林。</p>
+                        
+                        <div class="highlight-box">
+                            “林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。”
+                        </div>
+
+                        <p>土地平旷，屋舍俨然，有良田、美池、桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。</p>
+                        <p>见渔人，乃大惊，问所从来。具答之。便要还家，设酒杀鸡作食。村中闻有此人，咸来问讯。自云先世避秦时乱，率妻子邑人来此绝境，不复出焉，遂与外人间隔。问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”</p>
+                        <p>既出，得其船，便扶向路，处处志之。及郡下，诣太守，说如此。太守即遣人随其往，寻向所志，遂迷，不复得路。</p>
+                        <p>南阳刘子骥，高尚士也，闻之，欣然规往。未果，寻病终。后遂无问津者。</p>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <header class="article-header">
+                        <h2 class="article-title">深度解析：为何“桃花源”能穿越千年打动人心？</h2>
+                        <div class="article-meta">
+                            <span>作者：文学社</span>
+                            <span>分类：文学评论</span>
+                        </div>
+                    </header>
+                    <div class="article-body">
+                        <p>陶渊明的《桃花源记》不仅仅是一篇优美的散文，更是中国文学史上“乌托邦”思想的最早萌芽之一。文章通过渔人的视角，构建了一个与世隔绝、和平安宁的理想社会。</p>
+                        <p>在这个世界中，没有战乱，没有赋税，人们过着自给自足、和谐友爱的生活。这种对“大同世界”的向往，反映了当时动荡的社会现实下，普通民众对和平生活的极度渴望。文章结尾刘子骥寻而不得，更增添了一层神秘色彩和虚无感，暗示了这种理想在现实中的难以实现。</p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#">古典名著 <span>(128)</span></a></li>
+                        <li><a href="#">现代文学 <span>(95)</span></a></li>
+                        <li><a href="#">武侠仙侠 <span>(86)</span></a></li>
+                        <li><a href="#">科幻推理 <span>(64)</span></a></li>
+                        <li><a href="#">历史传记 <span>(52)</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门标签</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">田园诗</a>
+                        <a href="#" class="tag">乌托邦</a>
+                        <a href="#" class="tag">隐逸</a>
+                        <a href="#" class="tag">陶渊明</a>
+                        <a href="#" class="tag">散文</a>
+                        <a href="#" class="tag">古文观止</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">推荐阅读</h3>
+                    <div class="book-grid">
+                        <div class="book-item">
+                            <div class="book-cover">📘</div>
+                            <div class="book-title">世说新语</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-cover">📗</div>
+                            <div class="book-title">归去来兮辞</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-cover">📙</div>
+                            <div class="book-title">饮酒·其五</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>关于桃花源小说</h3>
+                <p>致力于传承中华优秀传统文化，提供高质量的古典文学与现代小说在线阅读服务。让阅读成为一种生活方式。</p>
+            </div>
+            <div class="footer-col">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                    <li><a href="#">版权声明</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系方式</h3>
+                <ul>
+                    <li>邮箱：contact@taohuayuan.com</li>
+                    <li>电话：400-123-4567</li>
+                    <li>地址：中国·网络文学之都</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 桃花源小说网 版权所有. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
